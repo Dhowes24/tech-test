@@ -1,12 +1,39 @@
+
+<!-- views/pages/index.ejs -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+    <% include ../partials/head %>
 </head>
-<body>
-<h1><%= title %></h1>
-<p>Hello, World! Welcome to <%= title %></p>
-<h1> Hello {{name}}</h1>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>This is great</h1>
+
+        <h2>Variable</h2>
+        <p class="textColor"><%= tagline %></p>
+
+        <h2>Loop</h2>
+
+        <ul>
+            <% drinks.forEach(function(drink) { %>
+                <li><%= drink.name %> - <%= drink.drunkness %></li>
+            <% }); %>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
 </body>
 </html>

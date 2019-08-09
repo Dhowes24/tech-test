@@ -5,35 +5,25 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
-
-    <% include ../partials/head %>
 </head>
 <body class="container">
 
-<header>
-    <% include ../partials/header %>
-</header>
 
 <main>
-    <div class="jumbotron">
-        <h1>This is great</h1>
+    <div>
+        <p class="textColor">Weather App</p>
 
-        <h2>Variable</h2>
-        <p class="textColor"><%= tagline %></p>
+        <form id="ZipCode" name="ZipCode" action="/APIcall", method="post">
+            <input id="inputZipCode" type="text" placeholder="ZipCode" name="ZipCode" />
+            <button id="btnSubmit" type="submit">Submit</button>
+        </form>
 
-        <h2>Loop</h2>
+        <h1> <%= city %> , <%= state %> </h1>
+        <h1> <%= weatherSummary%> , <%= temp%> , <%= time%></h1>
 
-        <ul>
-            <% drinks.forEach(function(drink) { %>
-                <li><%= drink.name %> - <%= drink.drunkness %></li>
-            <% }); %>
-        </ul>
+
     </div>
 </main>
-
-<footer>
-    <% include ../partials/footer %>
-</footer>
 
 </body>
 </html>

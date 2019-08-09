@@ -1,1 +1,20 @@
-Learning how to host a site, won't work on github with Node.js
+Going into this assignment I had never before used Node.js, Express, EJS, SCSS, or gulp. So the first hurdle I had to
+pass was to learn each of those aspects. That was the majority of the time spent. What took me the most time was figuring
+how to pass data and functions around the app, through app.* calls. I settled on saving all the data to app.local variables
+to access once the page rendered with my partial. I had the intent to use React components to create the weather info,
+along with hourly info beneath it, but my IDE would not let me set it over to React JSX, which I am comfortable with
+syntactically so I dropped it as it was a bonus and my experience in React can be proven elsewhere. It was more time
+constraints than anything else.
+
+I believe I got the IP location detection to work, but could not test it. The libraries I used worked on test IPs but
+when going off localhost I couldn't get the IP of my computer to test.
+
+I would have been able to test this if I could manage a live page. I attempted to use github pages but I found the
+service does not work with Node.js apps. I looked for many other ways to share a live page but each gave me a dead ends,
+or discovery of services that were no longer kept up.
+
+I am going to continue over the weekend to get the page live over the weekend and will tack onto my submission when I am
+able to do so. I will also take another attempt on integrating the react components I mentioned, since I am sure no one
+will be looking over this over the weekend.
+
+I designed all my Icons in Adobe Illustrator.

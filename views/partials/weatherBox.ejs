@@ -6,40 +6,41 @@
 
         <p class="statusText"><%= weatherSummary %></p>
 
+
         <% switch (icon) {
-            case "clear-day": %>
+        case "clear-day": %>
         <img class="imgStyle" src="../../images/ClearDayIcon.png">
-            <%break
-            case "clear-night":%>
+        <% break
+        case "clear-night": %>
         <img class="imgStyle" src="../../images/ClearNightIcon.png">
-        <%break
-            case "rain":%>
+        <% break
+        case "rain": %>
         <img class="imgStyle" src="../../images/RainIcon.png">
-        <%break
-        case "snow":%>
+        <% break
+        case "snow": %>
         <img class="imgStyle" src="../../images/SnowIcon.png">
-        <%break
-            case "sleet":%>
+        <% break
+        case "sleet": %>
         <img class="imgStyle" src="../../images/SleetIcon.png">
-        <%break
-        case "wind":%>
+        <% break
+        case "wind": %>
         <img class="imgStyle" src="../../images/WindIcon.png">
-        <%break
-        case "fog":%>
+        <% break
+        case "fog": %>
         <img class="imgStyle" src="../../images/FogIcon.png">
-        <%break
-        case "cloudy":%>
+        <% break
+        case "cloudy": %>
         <img class="imgStyle" src="../../images/CloudyIcon.png">
-        <%break
-            case "partly-cloudy-day":%>
+        <% break
+        case "partly-cloudy-day": %>
         <img class="imgStyle" src="../../images/PartlyCloudyDayIcon.png">
-        <%break
-            case "partly-cloudy-night":%>
+        <% break
+            case "partly-cloudy-night": %>
         <img class="imgStyle" src="../../images/PartlyCloudyNightIcon.png">
 
-        <%}%>
+        <% } %>
 
-        <p><%= Math.round(temp)%> &#8457</p>
+        <p><%= Math.round(temp) %> &#8457</p>
     <% }  else { %>
         <p class="locationText">ZipCode Not Valid</p>
     <% } %>

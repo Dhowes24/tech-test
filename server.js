@@ -17,7 +17,7 @@ var geoip = require('geoip-lite');
 var requestIp = require('request-ip');
 
 
-
+//Instantiate local variables to fill after calls
 app.locals.city = "n/a";
 app.locals.state = "n/a";
 app.locals.weatherSummary = "n/a";
@@ -25,9 +25,10 @@ app.locals.temp = "n/a";
 app.locals.time = "n/a";
 app.locals.icon = "n/a";
 
+//Knows to check user IP on render
 app.locals.firstLoad = true;
 
-// index page
+//Checking IP on first render
 app.get('/', async function (req, res) {
     if(app.locals.firstLoad) {
         try {
@@ -72,7 +73,7 @@ app.get('/', async function (req, res) {
         }
     }});
 
-
+//Checking ZipCode data on submit press
 app.post('/APIcall', async function (req, res) {
 
     if (!app.locals.firstLoad) {

@@ -16,11 +16,13 @@
 
 
                 <% include ../partials/weatherBox.ejs %>
+                <!-- Would switch this out for a react component but couldn't understand non-JSX syntax -->
 
             <form id="ZipCode" name="ZipCode" action="/APIcall" , method="post">
                 <input class="zipCodeStyle"
                         type="text" pattern="[0-9]*" minlength="5" maxlength="5" id="inputZipCode"
                         placeholder="ZipCode" name="ZipCode"/>
+                <!--Numeral added a counter button so forcing text to numeral was better, and could manage length.-->
                 <button class="buttonStyle"
                         id="btnSubmit" type="submit">Submit</button>
             </form>
@@ -31,7 +33,6 @@
 </main>
 
 <!-- Load React. -->
-<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 

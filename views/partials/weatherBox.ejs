@@ -1,0 +1,46 @@
+<!-- views/partials/weatherBox.ejs -->
+<div class="weatherBox">
+    <% if (city != "n/a") { %>
+
+        <p class="locationText"> <%= city %> , <%= state %> </p>
+
+        <p class="statusText"><%= weatherSummary %></p>
+
+        <% switch (icon) {
+            case "clear-day": %>
+        <img class="imgStyle" src="../../images/ClearDayIcon.png">
+            <%break
+            case "clear-night":%>
+        <img class="imgStyle" src="../../images/ClearNightIcon.png">
+        <%break
+            case "rain":%>
+        <img class="imgStyle" src="../../images/RainIcon.png">
+        <%break
+        case "snow":%>
+        <img class="imgStyle" src="../../images/SnowIcon.png">
+        <%break
+            case "sleet":%>
+        <img class="imgStyle" src="../../images/SleetIcon.png">
+        <%break
+        case "wind":%>
+        <img class="imgStyle" src="../../images/WindIcon.png">
+        <%break
+        case "fog":%>
+        <img class="imgStyle" src="../../images/FogIcon.png">
+        <%break
+        case "cloudy":%>
+        <img class="imgStyle" src="../../images/CloudyIcon.png">
+        <%break
+            case "partly-cloudy-day":%>
+        <img class="imgStyle" src="../../images/PartlyCloudyDayIcon.png">
+        <%break
+            case "partly-cloudy-night":%>
+        <img class="imgStyle" src="../../images/PartlyCloudyNightIcon.png">
+
+        <%}%>
+
+        <p><%= temp %></p>
+    <% }  else { %>
+        <p class="locationText">ZipCode Not Valid</p>
+    <% } %>
+</div>

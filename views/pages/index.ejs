@@ -1,4 +1,3 @@
-
 <!-- views/pages/index.ejs -->
 
 <!DOCTYPE html>
@@ -6,23 +5,27 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
-<body class="container">
-
+<body>
 
 <main>
-    <div>
-        <p class="textColor">Weather App</p>
 
-        <form id="ZipCode" name="ZipCode" action="/APIcall", method="post">
-            <input id="inputZipCode" type="text" placeholder="ZipCode" name="ZipCode" />
-            <button id="btnSubmit" type="submit">Submit</button>
-        </form>
+        <div class="infoBody">
 
-        <h1> <%= city %> , <%= state %> </h1>
-        <h1> <%= weatherSummary%> , <%= temp%> , <%= time%></h1>
+            <div class="inputData">
 
 
-    </div>
+                <% include ../partials/weatherBox.ejs %>
+
+            <form id="ZipCode" name="ZipCode" action="/APIcall" , method="post">
+                <input type="text" pattern="[0-9]*" minlength="5" maxlength="5" id="inputZipCode"
+                       placeholder="ZipCode" name="ZipCode"/>
+                <button id="btnSubmit" type="submit">Submit</button>
+            </form>
+
+            </div>
+
+        </div>
+
 </main>
 
 </body>

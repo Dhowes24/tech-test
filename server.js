@@ -104,12 +104,12 @@ app.post('/APIcall', async function (req, res) {
 
                 }
 
-                res.redirect("/");
+                res.render('pages/index');
             });
         } catch (e) {
             app.locals.city = "n/a";
 
-            res.redirect("/");
+            res.render('pages/index');
 
         }
     }

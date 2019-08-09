@@ -35,7 +35,6 @@ app.post('/APIcall', async function (req, res) {
     try {
 
         var location = zipcodes.lookup(zipCode);
-        // console.log(location);
 
         var lat = location.latitude;
         var long = location.longitude;
@@ -47,10 +46,7 @@ app.post('/APIcall', async function (req, res) {
             if (error) {
 
                 app.locals.city = "n/a";
-                app.locals.state = "n/a";
-                app.locals.weatherSummary = "n/a";
-                app.locals.temp = "n/a";
-                app.locals.time = "n/a";
+
                 return console.dir(error);
             } else {
                 var json = JSON.parse(body);
@@ -60,7 +56,6 @@ app.post('/APIcall', async function (req, res) {
                 app.locals.time = json.currently.time;
                 app.locals.icon = json.currently.icon;
 
-                console.dir(json.currently.summary);
             }
 
             res.redirect("/");

@@ -1,3 +1,4 @@
+//Background Styles ---------------------
 
 .infoBody {
   text-align: center;
@@ -5,41 +6,91 @@
   height: 100%;
   flex-direction: column;
   position: absolute;
-  background-image: linear-gradient(white 0%, #006189 50%);
+  background-image: linear-gradient(lightGrey 0%, #006189 50%);
 }
 
 .inputData {
   text-align: center;
   align-items: center;
   position: absolute;
-  flex-direction: row;
-  top: 30%;
+  flex-direction: column;
+  top: 15%;
   width: 100%;
 }
 
-.imgStyle {
-  width: 100px;
-}
 
-.weatherBox {
-  border-radius: 12px;
-  border: solid white;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 400px;
-  position: relative;
-  margin-bottom: 20px;
-  left: calc(50% - 200px);
-}
+//WeatherBox Styles ---------------------
+
 
 @media screen and (min-width: 601px) {
+  div.weatherBox {
+    border-radius: 12px;
+    border: solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 400px;
+    position: relative;
+    margin-bottom: 20px;
+    left: calc(50% - 200px);
+  }
+}
+@media screen and (max-width: 600px) {
+  div.weatherBox {
+    border-radius: 12px;
+    border: solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    left: calc(50% - 150px);
+  }
+}
+
+//--
+@media screen and (min-width: 601px) {
+  img.imgStyle {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  img.imgStyle {
+    width: 100px;
+  }
+}
+//--
+
+@media screen and (min-width: 601px) {
+  p.locationText {
+    font-size: 50px
+  }
+}
+@media screen and (max-width: 600px) {
   p.locationText {
     font-size: 40px
   }
 }
 
+//--
 @media screen and (min-width: 601px) {
   p.statusText {
     font-size: 20px;
     margin-top: -30px;
   }
+}
+@media screen and (max-width: 600px) {
+  p.statusText {
+    font-size: 15px;
+    margin-top: -25px;
+  }
+}
+
+//Form Styles -----------------
+
+.zipCodeStyle{
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.buttonStyle{
+  font-size: 15px;
+  border-radius: 5px;
 }

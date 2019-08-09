@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -17,9 +18,11 @@
                 <% include ../partials/weatherBox.ejs %>
 
             <form id="ZipCode" name="ZipCode" action="/APIcall" , method="post">
-                <input type="text" pattern="[0-9]*" minlength="5" maxlength="5" id="inputZipCode"
-                       placeholder="ZipCode" name="ZipCode"/>
-                <button id="btnSubmit" type="submit">Submit</button>
+                <input class="zipCodeStyle"
+                        type="text" pattern="[0-9]*" minlength="5" maxlength="5" id="inputZipCode"
+                        placeholder="ZipCode" name="ZipCode"/>
+                <button class="buttonStyle"
+                        id="btnSubmit" type="submit">Submit</button>
             </form>
 
             </div>

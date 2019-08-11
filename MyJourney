@@ -1,20 +1,19 @@
-Going into this assignment I had never before used Node.js, Express, EJS, SCSS, or gulp. So the first hurdle I had to
-pass was to learn each of those aspects. That was the majority of the time spent. What took me the most time was figuring
-how to pass data and functions around the app, through app.* calls. I settled on saving all the data to app.local variables
-to access once the page rendered with my partial. I had the intent to use React components to create the weather info,
-along with hourly info beneath it, but my IDE would not let me set it over to React JSX, which I am comfortable with
-syntactically so I dropped it as it was a bonus and my experience in React can be proven elsewhere. It was more time
-constraints than anything else.
+Going into this assignment I never before touched Node.js, Express, EJS, gulp, or really anything other than React.
+I didn't find much trouble implementing any of those expect learning how functionality was passed around in express. But
+once I found that out it was pretty clear and intuitive.
 
-I believe I got the IP location detection to work, but could not test it. The libraries I used worked on test IPs but
-when going off localhost I couldn't get the IP of my computer to test.
+The only setback I had was actually deploying the site. I spent the majority of my time on this. Github pages apparently
+does not host Node.js projects, so I looked in many other places to host a page for free. I didn't find any that worked
+and decided to pay the small fee for AWS since I am somewhat familiar with it. My app wouldn't deploy so I decided to take
+their sample app and put my own code in there to check where the problems lie. I didn't really figure it out, but was able
+to get it deployed by seemingly just having that file structure and changing the name of some files.
 
-I would have been able to test this if I could manage a live page. I attempted to use github pages but I found the
-service does not work with Node.js apps. I looked for many other ways to share a live page but each gave me a dead ends,
-or discovery of services that were no longer kept up.
+I had the IP location detection set up from this the same way I did zipcodes and it worked, which I was only able to test
+once the site was deployed.
 
-I am going to continue over the weekend to get the page live over the weekend and will tack onto my submission when I am
-able to do so. I will also take another attempt on integrating the react components I mentioned, since I am sure no one
-will be looking over this over the weekend.
+I planned on adding react components, but the site deployment wouldn't allow me to deploy new instances for some reason.
+I was unable to figure that out and decided that because it was a bonus attribute, and my skills in react can be seen
+elsewhere in my work that I would leave it out. Mostly an effort to get the project in since I held onto it for a little
+while longer than average to figure out the deployment.
 
 I designed all my Icons in Adobe Illustrator.
